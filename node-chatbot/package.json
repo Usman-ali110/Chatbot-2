@@ -1,0 +1,19 @@
+{
+  "name": "node-ai-chatbot",
+  "version": "1.0.0",
+  "description": "AI chatbot: Node.js + MongoDB Atlas Vector Search + OpenAI",
+  "type": "module",
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "ingest": "node scripts/ingest.js",
+    "check": "node scripts/check.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0"
+  }
+}

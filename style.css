@@ -1,0 +1,41 @@
+/* ===== Design tokens: change --brand-1 / --brand-2 to rebrand ===== */
+:root {
+  --brand-1: #6366f1;
+  --brand-2: #a855f7;
+  --bg: #eef0ff;
+  --card: rgba(255, 255, 255, 0.82);
+  --surface: #ffffff;
+  --chip: #f1f2f9;
+  --border: #e5e7f2;
+  --text: #1b1d2e;
+  --muted: #7a7f98;
+  --shadow: 0 30px 80px -30px rgba(79, 70, 229, 0.35), 0 8px 24px -12px rgba(15, 23, 42, 0.12);
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0b0c16;
+  --card: rgba(22, 24, 41, 0.82);
+  --surface: #1d2036;
+  --chip: #2a2e4a;
+  --border: #2d3150;
+  --text: #eceefb;
+  --muted: #9096b4;
+  --shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.7);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body, #app { margin: 0; min-height: 100%; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 500px at 10% -10%, color-mix(in srgb, var(--brand-1) 30%, transparent), transparent 60%),
+    radial-gradient(800px 500px at 100% 110%, color-mix(in srgb, var(--brand-2) 28%, transparent), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
